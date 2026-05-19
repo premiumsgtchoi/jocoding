@@ -209,18 +209,49 @@
       </section>
 
       <section id="contact" class="section contact-section">
-        <div>
+        <div class="contact-copy">
           <p class="eyebrow">Contact</p>
           <h2>정보교육, 프로그래밍 교육, 컴퓨팅 사고력에 관한 대화를 환영합니다.</h2>
+          <p>
+            강의, 연구, 교육 프로그램 개발, 제휴 제안이 있다면 간단히 남겨주세요.
+            확인 후 가능한 빠르게 답변드리겠습니다.
+          </p>
+          <div class="contact-actions">
+            <a class="button secondary" href="https://today7.notion.site/present" target="_blank" rel="noreferrer">
+              Notion 보기
+            </a>
+            <a class="button secondary" href="https://github.com/premiumsgtchoi" target="_blank" rel="noreferrer">
+              GitHub 보기
+            </a>
+          </div>
         </div>
-        <div class="contact-actions">
-          <a class="button primary" href="https://today7.notion.site/present" target="_blank" rel="noreferrer">
-            Notion 보기
-          </a>
-          <a class="button secondary" href="https://github.com/premiumsgtchoi" target="_blank" rel="noreferrer">
-            GitHub 보기
-          </a>
-        </div>
+        <form class="inquiry-form" action="https://formspree.io/f/mgoqvlvj" method="POST">
+          <div class="form-row">
+            <label for="name">이름</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="form-row">
+            <label for="email">이메일</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="form-row">
+            <label for="category">문의 유형</label>
+            <select id="category" name="category" required>
+              <option value="">선택해주세요</option>
+              <option value="partnership">제휴 문의</option>
+              <option value="lecture">강의 문의</option>
+              <option value="research">연구 협업</option>
+              <option value="program">교육 프로그램 개발</option>
+              <option value="other">기타</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">문의 내용</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="오늘쌤 포트폴리오 제휴 문의" />
+          <button class="button primary form-submit" type="submit">문의 보내기</button>
+        </form>
       </section>
     </main>
   </body>
