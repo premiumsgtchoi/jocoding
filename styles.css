@@ -48,11 +48,11 @@ a {
 
 .brand {
   display: inline-grid;
-  width: 44px;
+  width: 52px;
   height: 44px;
   place-items: center;
   border: 1px solid var(--ink);
-  border-radius: 50%;
+  border-radius: 999px;
   font-weight: 800;
   letter-spacing: 0;
 }
@@ -83,7 +83,7 @@ a {
   border-radius: 8px;
   background:
     linear-gradient(135deg, rgba(15, 118, 110, 0.88), rgba(195, 93, 50, 0.58)),
-    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80");
+    url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=80");
   background-position: center;
   background-size: cover;
   box-shadow: var(--shadow);
@@ -218,6 +218,57 @@ h3 {
   word-break: keep-all;
 }
 
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: clamp(28px, 5vw, 54px);
+}
+
+.chip-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid rgba(15, 118, 110, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--accent-strong);
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.timeline {
+  display: grid;
+  gap: 0;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.34fr) minmax(280px, 1fr);
+  gap: clamp(22px, 5vw, 64px);
+  padding: clamp(24px, 4vw, 38px) 0;
+  border-top: 1px solid var(--line);
+}
+
+.timeline-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.timeline-item time {
+  color: var(--warm);
+  font-weight: 800;
+}
+
+.timeline-item p {
+  color: var(--muted);
+  word-break: keep-all;
+}
+
+.timeline.compact .timeline-item {
+  border-color: #cfdbd3;
+}
+
 .project-list {
   display: grid;
   gap: 18px;
@@ -256,7 +307,7 @@ h3 {
 
 .strength-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
 }
 
@@ -320,6 +371,7 @@ h3 {
   .hero,
   .section-heading,
   .intro-grid,
+  .timeline-item,
   .project-card,
   .contact-section {
     grid-template-columns: 1fr;
